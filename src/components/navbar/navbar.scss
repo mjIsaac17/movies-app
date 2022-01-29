@@ -1,0 +1,9 @@
+.navbar {
+  align-items: center;
+  background-color: $primary;
+  color: $text-primary;
+  display: flex;
+  justify-content: center;
+  height: min(10%, 75px);
+  width: 100%;
+}
