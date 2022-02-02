@@ -1,8 +1,12 @@
-import Navbar from "./components/navbar/Navbar";
+import Layout from "./components/layout/Layout";
 import "./styles/main.scss";
 
 const App = () => {
-  return <Navbar />;
+  return (
+    <>
+      <Layout />
+    </>
+  );
 };
 
 export default App;
