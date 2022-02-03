@@ -16,3 +16,22 @@ export const marvelMovies = [
     year: "2021",
   },
 ];
+
+export const kidsMovies = [
+  {
+    title: "Tom & Jerry",
+    year: "2021",
+  },
+  {
+    title: "Encanto",
+    year: "2021",
+  },
+  {
+    title: "Boss Baby",
+    year: "2021",
+  },
+  {
+    title: "Clifford",
+    year: "2021",
+  },
+];

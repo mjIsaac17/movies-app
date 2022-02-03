@@ -1,20 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 import { getMovies } from "../../assets/loadMovies";
-import { marvelMovies } from "../../assets/moviesToSearch";
 import Movie from "./Movie";
 
-const PreviewMovies = () => {
+const PreviewMovies = ({ moviesTitle = "Movies", moviesToSearch = [] }) => {
   const [movies, setMovies] = useState(null);
 
   const loadMovies = useCallback(async () => {
-    const movies = await getMovies(marvelMovies);
+    const movies = await getMovies(moviesToSearch);
     setMovies(movies);
   }, []);
-
-  // const loadMovies = () => {
-  //   const movie = getMovie(marvelMovies[0].title, marvelMovies[0].year);
-  //   console.log(movie);
-  // };
 
   useEffect(() => {
     loadMovies();
@@ -24,7 +18,7 @@ const PreviewMovies = () => {
     <div className="preview-movies-container">
       <div className="title-section">
         <p className="h3 bold hover">
-          Marvel movies <span class="show-on-hover">{"→"}</span>
+          {moviesTitle} <span className="show-on-hover">{"→"}</span>
         </p>
       </div>
       <div className="movies-section">
