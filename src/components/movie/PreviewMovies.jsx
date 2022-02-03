@@ -8,7 +8,7 @@ const PreviewMovies = ({ moviesTitle = "Movies", moviesToSearch = [] }) => {
   const loadMovies = useCallback(async () => {
     const movies = await getMovies(moviesToSearch);
     setMovies(movies);
-  }, []);
+  }, [moviesToSearch]);
 
   useEffect(() => {
     loadMovies();

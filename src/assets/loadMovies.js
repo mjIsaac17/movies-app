@@ -2,7 +2,9 @@ const baseUrl = "https://www.omdbapi.com/";
 const apiKey = "apikey=5f37afb2";
 
 export const getMovie = (title, year) => {
-  const url = `${baseUrl}?t=${title}&y=${year}&${apiKey}`;
+  let url;
+  if (year && year !== "") url = `${baseUrl}?t=${title}&y=${year}&${apiKey}`;
+  else url = `${baseUrl}?t=${title}&${apiKey}`;
 
   return fetch(url).then((response) => response.json());
 };

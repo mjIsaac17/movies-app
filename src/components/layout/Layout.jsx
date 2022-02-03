@@ -1,11 +1,11 @@
 import HomeScreen from "../home/HomeScreen";
 import Navbar from "../navbar/Navbar";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <HomeScreen />
+      {children}
     </>
   );
 };
